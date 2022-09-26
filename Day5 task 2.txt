@@ -1,0 +1,95 @@
+// Question 02: Do the below programs in arrow functions
+
+// A) Print odd numbers in an array
+
+var temp = [];
+  var odd = (arr)=>{
+  
+      for(var i=0; i<arr.length; i++){
+      
+          if(arr[i] %2 !=0){    
+          
+              temp.push(arr[i]);
+          }
+      }
+      return temp;
+  }
+  console.log(odd([10,11,12,13,14,15,16,17,18,19,20]));
+  
+// output : [ 11, 13, 15, 17, 19 ]
+ 
+// B) Convert all the strings to title caps in a string array
+
+var text = (a)=>{
+    
+  a=a.toLowerCase().split(" ");
+  
+  for ( var i = 0; i<a.length; i++) {
+    
+    a[i]=a[i].charAt(0).toUpperCase()+a[i].slice(1);
+  }
+  return a.join(" ");
+}
+console.log (  text ("welcomE to gUvi"));
+
+// output : Welcome To Guvi
+
+// C) Sum of all numbers in an array
+
+var temp =0;
+  var sum = (arr)=>{
+      for(var i=0; i<arr.length; i++){
+          temp=temp+(arr[i]);
+          }
+          return temp;
+      }
+      
+  console.log(sum([12,13,14,15]));
+  
+// output : 54
+
+// D) Return all the prime numbers in an array
+
+var temp =[];
+var prime = (arr)=>{
+for ( var i = 0; i <arr.length; i++) {
+  
+  for ( var j = 2; j <arr[i]; j++) {
+    
+    if ( arr[i] % j == 0 ) {
+      
+      break;
+      
+    }
+    
+  }
+  if ( arr[i] == j ) {
+    
+    temp.push(arr[i]);
+  }
+  
+
+}
+return temp;
+};
+console.log(prime([1,2,3,4,5,7,8,9,11,12]));
+
+// output : [2,3,5,7,11]
+
+// E) Return all the palindromes in an array
+
+var result = [];
+  var input = (arr)=>{
+      for(var i=0; i<arr.length; i++){
+          var a = arr[i];
+          var b = arr[i].split("").reverse().join("");
+          
+          if(a == b){
+             result.push(a);
+          }
+      }
+    return result;
+  }
+  console.log(input(["guvi", "mother", "1234", "12321", "dad"]));
+  
+// output : [ '12321', 'dad' ]
